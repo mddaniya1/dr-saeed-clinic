@@ -31,7 +31,7 @@ export function Services() {
           className="mt-12 grid gap-6 md:grid-cols-2"
         >
           {serviceCards.map((card, i) => {
-            const Icon = icons[i];
+            const Icon = icons[i % icons.length]!;
             const isActive = active === i;
             return (
               <motion.div
